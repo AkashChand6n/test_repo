@@ -1,0 +1,44 @@
+  265  svnadmin create /home/ubuntu/myrepo
+  266  svnadmin create svn_repo
+  267  pwd
+  268  cd svn_repo/
+  269  pwd
+  270  cd ..
+  271  svn mkdir file:////home/akashanoop123456/svn_repo/trunk -m "Created trunk directory"
+  272  pwd
+  273  svn mkdir file:////home/akashanoop123456/svn_repo/branches -m "Created branches directory"
+  274  svn mkdir file:////home/akashanoop123456/svn_repo/tags -m "Created tags directory"
+  275  svn list file:////home/akashanoop123456/svn_repo
+  276  svn checkout file:///home/akashanoop123456/svn_repo/trunk ~/svn_repo-working-copy
+  277  cd svn_repo-working-copy/
+  278  echo "This is my SVN repository" > README.md
+  279  echo "This is my SVN repository" > version.txt
+  280  echo "This is my SVN repository" > version1.txt
+  281  echo "This is my SVN repository" > version2.txt
+  282  svn add .
+  283  svn add README.md version.txt version1.txt version2.txt 
+  284  echo "This is my SVN repository" > version3.txt
+  285  echo "This is my SVN repository" > version4.txt
+  286  svn add *
+  287  svn commit -m "version hehe"
+  288  history
+  289  svn copy file:///home/akashanoop123456@gmail.com/svn_repo/trunk file:///home/akashanoop123456@gmail.com/svn_repo/tags/v1.0 -m "Version 1.0 release"
+  290  svn copy file:///home/akashanoop123456/svn_repo/trunk file:///home/akashanoop123456/svn_repo/tags/v1.0 -m "Version 1.0 release"
+  291  echo "Version 2 content" >> version7.txt
+  292  svn add *
+  293  svn commit -m "version hehe haha"
+  294  svn copy file:///home/akashanoop123456/svn_repo/trunk file:///home/akashanoop123456/svn_repo/tags/v2.0 -m "Version 2.0 release"
+  295  echo "akashanoop123456 = Akashchand6n <akashanoop123456@gmail.com>" > authors.txt
+  296  git svn clone file:///home/akashanoop123456/svn_repo --stdlayout --no-metadata -A authors.txt --prefix=svn/ ~/test_repo
+  297  cd ..
+  298  ls
+  299  cd test_repo/
+  300  git remote add origin git@github.com:AkashChand6n/test_repo.git
+  301  ls -al ~/.ssh
+  302  git remote set-url origin git@github.com:AkashChand6n/test_repo.git
+  303  git remote -v
+  304  git push -u origin -all
+  305  git push -u origin --all
+  306  git push-u--tags
+  307  git push -u --tags
+  308  history
